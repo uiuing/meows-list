@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "npm run lint && vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "prettier": "prettier --write 'src/**/*.{ts,html,js,css,json,vue}'",
     "lint": "yarn run lint:eslint && yarn run lint:stylelint",
@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "@types/node": "^18.6.3",
+    "@typescript-eslint/parser": "^5.32.0",
     "@vitejs/plugin-vue": "^3.0.0",
+    "element-plus": "^2.2.12",
     "eslint": "^8.21.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -23,6 +25,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-vue": "^9.2.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.14",
     "postcss-html": "^1.5.0",
     "prettier": "^2.7.1",
@@ -35,14 +39,32 @@
     "stylelint-config-standard": "^26.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
+    "unplugin-auto-import": "^0.10.3",
+    "unplugin-vue-components": "^0.21.2",
     "vite": "^3.0.4",
-    "vite-plugin-eslint": "^1.6.1",
     "vue": "^3.2.37",
+    "vue-eslint-parser": "^9.0.3",
     "vue-tsc": "^0.39.4"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.32.0",
-    "@typescript-eslint/parser": "^5.32.0",
     "typescript": "^4.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,vue,css,scss}": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.{js,vue}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add -A"
+    ]
   }
 }
