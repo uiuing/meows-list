@@ -61,7 +61,7 @@
       "stylelint --fix",
       "git add"
     ],
-    "*.{js,vue}": [
+    "*.{js,ts,vue}": [
       "prettier --write",
       "eslint --fix",
       "git add -A"
