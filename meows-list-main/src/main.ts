@@ -2,6 +2,6 @@ import './style.css'
 
 import { createApp } from 'vue'
 
-import App from './App.vue'
+import Meows from './MeowsList.vue'
 
-createApp(App).mount('meows-list')
+createApp(Meows).mount('meows-list')
