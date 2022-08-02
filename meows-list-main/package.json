@@ -1,0 +1,48 @@
+{
+  "name": "meows-list-main",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "prettier": "prettier --write 'src/**/*.{ts,html,js,css,json,vue}'",
+    "lint": "yarn run lint:eslint && yarn run lint:stylelint",
+    "lint:eslint": "eslint --fix --ext .vue,.js,.jsx,.ts,.tsx ./src",
+    "lint:stylelint": "stylelint 'src/**/*.{vue,scss,css}' --fix"
+  },
+  "dependencies": {
+    "@types/node": "^18.6.3",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "postcss": "^8.4.14",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "vite": "^3.0.4",
+    "vite-plugin-eslint": "^1.6.1",
+    "vue": "^3.2.37",
+    "vue-tsc": "^0.39.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "typescript": "^4.7.4"
+  }
+}

@@ -1,0 +1,19 @@
+version: "1.0"
+
+services:
+  app:
+    build: .
+    container_name: app
+    command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+    ports:
+      - "53401:8000"
+
+  catslist_db:
+    image: postgres:14.4
+    container_name: catslist_db
+    ports:
+      - "53402:5432"
+    environment:
+      - POSTGRES_USER=catslist
+      - POSTGRES_PASSWORD=m@!9Z!~qDZ_x3ym#:VkT0.Eqw
+      - POSTGRES_DB=catslist
