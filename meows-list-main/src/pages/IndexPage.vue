@@ -4,4 +4,5 @@ import HeaderNavigate from '../components/Header/HeaderNavigate.vue'
 
 <template>
   <header-navigate />
+  <router-view />
 </template>
