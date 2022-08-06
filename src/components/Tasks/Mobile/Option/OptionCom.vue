@@ -4,7 +4,6 @@
 
 <template>
   <div></div>
-  ssssa
 </template>
 
 <style scoped>
