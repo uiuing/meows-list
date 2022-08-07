@@ -4,5 +4,11 @@ import HeaderNavigate from '../components/Header/HeaderNavigate.vue'
 
 <template>
   <header-navigate />
-  <router-view />
+  <div class="content-layout">
+    <router-view />
+  </div>
 </template>
+
+<style scoped>
+@import './style.module.css';
+</style>

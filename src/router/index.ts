@@ -2,7 +2,6 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import notesRouter from '../components/Notes/notesRouter'
 import tasksRouter from '../components/Tasks/tasksRouter'
-import viewsRouter from '../components/Views/viewsRouter'
 
 const routes: Array<any> = [
   {
@@ -10,7 +9,6 @@ const routes: Array<any> = [
     redirect: '/tasks'
   },
   { ...tasksRouter },
-  { ...viewsRouter },
   { ...notesRouter }
 ]
 

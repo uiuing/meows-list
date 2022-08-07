@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { isMobile } from '../../hooks/location'
-import DesktopNavigate from './Desktop/DesktopNavigate.vue'
-import MobileNavigate from './Mobile/MobileNavigate.vue'
+import { useMobile } from '../../hooks'
+import DesktopComponent from './Desktop/DesktopNavigate.vue'
+import MobileComponent from './Mobile/MobileNavigate.vue'
+
+const isMobile = useMobile()
 </script>
 
 <template>
-  <desktop-navigate v-if="isMobile()" />
-  <mobile-navigate v-else />
+  <mobile-component v-if="isMobile" />
+  <desktop-component v-else />
 </template>
