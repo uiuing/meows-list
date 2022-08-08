@@ -6,7 +6,7 @@ export function useMobile(): Ref<UnwrapRef<boolean>> {
   const isMobile = ref(false)
   effect(() => {
     const isMobileUserAgent =
-      /Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|iPad|WebOS/i.test(
+      /Android|iPhone|iPod|BlackBerry|MicroMessenger|IEMobile|Opera Mini|iPad|WebOS/i.test(
         window.navigator.userAgent
       )
     const { innerWidth, innerHeight } = window
