@@ -1,19 +1,46 @@
-/**
- * @description Determine if it is a non-mobile device, ipads and WebOS excluded.
- * @return {boolean}
- */
-import { effect, Ref, ref, UnwrapRef } from 'vue'
+/* eslint-disable no-unused-vars */
 
-// eslint-disable-next-line import/prefer-default-export
-export const useMobile = (): Ref<UnwrapRef<boolean>> => {
+import { effect, reactive, Ref, ref, UnwrapRef } from 'vue'
+
+export function useMobile(): Ref<UnwrapRef<boolean>> {
   const isMobile = ref(false)
   effect(() => {
     const isMobileUserAgent =
-      /Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      /Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|iPad|WebOS/i.test(
         window.navigator.userAgent
       )
-    const isMobileScreenWidth = window.screen.width < 600
-    isMobile.value = isMobileUserAgent && isMobileScreenWidth
+    const { innerWidth, innerHeight } = window
+    const isEricScreen = innerWidth > innerHeight
+    isMobile.value = isMobileUserAgent && isEricScreen
   })
   return isMobile
+}
+
+interface LocationHash {
+  name: string
+
+  get(): string
+
+  set(newHash: string): void
+}
+
+export function useLocationHash(): LocationHash {
+  const hash = reactive<LocationHash>({
+    name: '',
+    get: () => {
+      const _ = window.location.hash
+      if (_) {
+        return _.includes('#/') ? _.replace('#/', '') : _
+      }
+      return 'tasks'
+    },
+    set: (newHash: string) => {
+      window.location.hash = `#/${newHash}`
+    }
+  })
+  hash.name = hash.get()
+  window.addEventListener('hashchange', () => {
+    hash.name = hash.get()
+  })
+  return hash
 }

@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div></div>
+  <h1>待办清单</h1>
 </template>
 
 <style scoped>
-/*...*/
+/* ... */
 </style>

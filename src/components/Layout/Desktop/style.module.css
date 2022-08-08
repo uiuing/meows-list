@@ -1,0 +1,31 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: var(--desktop-auto-margin);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  min-width: 1024px;
+  max-width: 1400px;
+  height: var(--desktop-auto-height);
+  max-height: 950px;
+  margin: auto;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+}
+
+.nav-layout {
+  width: 73px;
+  padding: 15px 0;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+}
+
+.content-layout {
+  width: 100%;
+  padding: 20px;
+}

@@ -7,7 +7,7 @@ const isMobile = useMobile()
 const tasksRouter: Record<string, any> = {
   path: '/tasks',
   name: 'tasks',
-  component: isMobile ? MobileIndex : DesktopIndex
+  component: isMobile.value ? MobileIndex : DesktopIndex
 }
 
 export default tasksRouter

@@ -1,0 +1,48 @@
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 30px 0 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-content: center;
+  align-items: center;
+}
+
+.svg-logo {
+  width: 51px;
+  height: 52px;
+}
+
+.svg-finish {
+  width: 37px;
+  height: 35px;
+  color: #909399;
+}
+
+.svg-note {
+  width: 39px;
+  height: 39px;
+}
+
+.nav-option {
+  -webkit-user-drag: none;
+  fill: var(--icon-default-color);
+}
+
+.nav-option-active {
+  fill: var(--icon-active-color);
+}

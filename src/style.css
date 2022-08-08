@@ -4,8 +4,11 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 body,
@@ -21,4 +24,15 @@ h5,
 h6 {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
     'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+:root {
+  --box-shadow: 0 17px 32px 0 rgb(0 0 0 / 16%);
+  --icon-default-color: #909399;
+  --icon-active-color: #409eff;
+}
+
+.el-popper {
+  background-color: rgb(0 0 0 / 53%) !important;
+  border: none !important;
 }
