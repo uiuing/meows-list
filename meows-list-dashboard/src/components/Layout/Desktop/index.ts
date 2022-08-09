@@ -9,8 +9,8 @@ export function initScreen() {
     initData.height = '950px'
     initData.margin = '6vh 0'
   } else {
-    initData.height = '100%'
-    initData.margin = 'auto'
+    initData.height = `${innerHeight - 30}px`
+    initData.margin = '15px 0'
   }
   const d = document.documentElement.style
   d.setProperty('--desktop-auto-margin', initData.margin)

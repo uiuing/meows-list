@@ -10,7 +10,7 @@ export function useMobile(): Ref<UnwrapRef<boolean>> {
         window.navigator.userAgent
       )
     const { innerWidth, innerHeight } = window
-    const isEricScreen = innerWidth > innerHeight
+    const isEricScreen = innerHeight > innerWidth
     isMobile.value = isMobileUserAgent && isEricScreen
   })
   return isMobile
