@@ -1,2 +1,4 @@
 # meows-list
-The Meow List, open source cross-platform list management tool ｜ 喵喵清单，开源的跨平台清单管理工具
+
+meows-list-dashboard : Core content and functions
+meows-list-site : Official website
