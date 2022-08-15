@@ -28,6 +28,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "localforage": "^1.10.0",
+    "mavon-editor": "^3.0.0-beta",
     "pinia": "^2.0.17",
     "pinia-plugin-persistedstate": "^2.1.0",
     "postcss": "^8.4.14",

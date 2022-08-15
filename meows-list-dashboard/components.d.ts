@@ -11,6 +11,8 @@ declare module '@vue/runtime-core' {
     DesktopLayout: typeof import('./src/components/Layout/Desktop/DesktopLayout.vue')['default']
     DesktopNavigate: typeof import('./src/components/Header/Desktop/DesktopNavigate.vue')['default']
     DetailsCom: typeof import('./src/components/Tasks/Mobile/Details/DetailsCom.vue')['default']
+    ElBacktop: typeof import('element-plus/es')['ElBacktop']
+    ElButton: typeof import('element-plus/es')['ElButton']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     HeaderNavigate: typeof import('./src/components/Header/HeaderNavigate.vue')['default']
     LayoutBuffer: typeof import('./src/components/Layout/Buffer/LayoutBuffer.vue')['default']
