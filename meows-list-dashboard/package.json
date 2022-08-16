@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "prettier": "prettier --write 'src/**/*.{ts,html,js,css,json,vue}'",
     "lint": "yarn run lint:eslint && yarn run lint:stylelint",
